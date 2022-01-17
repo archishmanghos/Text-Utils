@@ -72,35 +72,35 @@ export default function TextForm(props) {
             style={{backgroundColor: props.mode==='dark'?"#423F3E":props.mode==='primary'?"#406882":"white", color: props.mode==='light'?"black":"white"}}
           ></textarea>
         </div>
-        <button
+        <button disabled={text.length===0}
           type="button"
           className={`btn btn-${props.mode==='dark'?'dark':'primary'} mx-1`}
           onClick={handleClearText}
         >
           Clear Text
         </button>
-        <button
+        <button disabled={text.length===0}
           type="button"
           className={`btn btn-${props.mode==='dark'?'dark':'primary'} mx-1`}
           onClick={handleCopyText}
         >
           Copy Text
         </button>
-        <button
+        <button disabled={text.length===0}
           type="button"
           className={`btn btn-${props.mode==='dark'?'dark':'primary'} mx-1`}
           onClick={handleUpChange}
         >
           Convert to Upper Case
         </button>
-        <button
+        <button disabled={text.length===0}
           type="button"
           className={`btn btn-${props.mode==='dark'?'dark':'primary'} mx-1`}
           onClick={handleLoChange}
         >
           Convert to Lower Case
         </button>
-        <button
+        <button disabled={text.length===0}
           type="button"
           className={`btn btn-${props.mode==='dark'?'dark':'primary'} mx-1`}
           onClick={handleInvChange}
@@ -115,7 +115,7 @@ export default function TextForm(props) {
         </p>
         <p>{0.008 * calculateWords(text)} minutes to read the entire text</p>
         <h3>Preview</h3>
-        <p>{text.length>0?text:"Enter text in text box above to preview"}</p>
+        <p>{text.length>0?text:"Nothing to preview"}</p>
       </div>
     </>
   );

@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
 import "./App.css";
-// import About from './components/About';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
@@ -62,7 +61,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about" element={<About />} />
+            <Route exact path="/about" element={<About/>}/>
             <Route
               exact
               path="/"
